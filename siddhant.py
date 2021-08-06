@@ -1646,6 +1646,8 @@ async def _(e):
 
 
 
+
+
 async def get_chatinfo(event):
     chat = event.pattern_match.group(1)
     chat_info = None
@@ -1728,9 +1730,9 @@ async def get_users(event):
     if not sender.id == me.id:
         mafia = await event.edit(f"`processing...`")
     else:
+        h1m4n5hu0p = await get_chatinfo(event)
+        chat = await event.get_chat()
         
-    h1m4n5hu0p = await get_chatinfo(event)
-    chat = await event.get_chat()
     if event.is_private:
         return await mafia.edit("`Sorry, Cant add users here`")
     s = 0
@@ -1757,6 +1759,7 @@ async def get_users(event):
     return await mafia.edit(
         f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people"
     )
+
 
 
 
