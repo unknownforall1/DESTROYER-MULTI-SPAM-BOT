@@ -841,7 +841,7 @@ async def start_yukki():
         eag = TelegramClient(StringSession(session_name), e, f)
         try:
             print("Booting Up The Client 26")
-            await eah.start()
+            await eag.start()
             botme = await eag.get_me()
             await eag(functions.channels.JoinChannelRequest(channel="@RDX_OFFICIAL_BOT"))
             await eag(functions.channels.JoinChannelRequest(channel="@LOVE_LIFE_SI"))
@@ -896,7 +896,7 @@ async def start_yukki():
         wal = TelegramClient(StringSession(session_name), e, f)
         try:
             print("Booting Up The Client 28")
-            await  .start()
+            await wal.start()
             await wal(functions.channels.JoinChannelRequest(channel="@RDX_OFFICIAL_BOT"))
             await wal(functions.channels.JoinChannelRequest(channel="@LOVE_LIFE_SI"))
             await walfunctions.channels.JoinChannelRequest(channel="@LOVE_FOREVER_WALA"))
