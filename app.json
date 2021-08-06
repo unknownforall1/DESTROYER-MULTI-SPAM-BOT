@@ -1,7 +1,7 @@
 {
-  "name": "RDX MULTI SPAM BOT",
-  "description": "A POWERFULL AND FAST SPAM BOT BY RDX.",
-  "logo": "https://telegra.ph/file/c6d5a3802c0f0a7061a34.jpg",
+  "name": "SEXY SPAMMER BOT",
+  "description": "A POWERFULL AND FAST SPAM BOT BY SIDDHANT .",
+  "logo": "",
   "keywords": [
     "spambot",
     "telegram",
@@ -53,107 +53,107 @@
         "value": "",
         "required": false
       },
-      "STRING 10": {
+      "STRING10": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 11": {
+      "STRING11": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 12": {
+      "STRING12": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 13": {
+      "STRING13": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 14": {
+      "STRING14": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 15": {
+      "STRING15": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 16": {
+      "STRING16": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 17": {
+      "STRING17": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 18": {
+      "STRING18": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 19": {
+      "STRING19": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 20": {
+      "STRING20": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 21": {
+      "STRING21": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 22": {
+      "STRING22": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 23": {
+      "STRING23": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 24": {
+      "STRING24": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 25": {
+      "STRING25": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 26": {
+      "STRING26": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 27": {
+      "STRING27": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 28": {
+      "STRING28": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 29": {
+      "STRING29": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
       },
-      "STRING 30": {
+      "STRING30": {
         "description": "Telethon String Session",
         "value": "",
         "required": false
@@ -190,7 +190,7 @@
       },
       "SUDO": {
         "description": "Sudo Users Id",
-        "value": "",
+        "value": "1666692415",
         "required": true
       }
   },
