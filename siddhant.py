@@ -18,7 +18,7 @@ from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest
 
 
-from Config import STRING, SUDO, BIO_MESSAGE, ALIVE_NAME, API_ID1, API_ID2, API_ID3, API_HASH1, API_HASH2, API_HASH3, STRING2, STRING3, STRING4 ,STRING5, STRING6, STRING7, STRING8 ,STRING9, STRING10, STRING11, STRING12 , STRING13 , STRING14 , STRING15 ,STRING16 , STRING17 , STRING18 , STRING19 , STRING20 , STRING21 , STRING22 , STRING23 , STRING24 , STRING25 , STRING26 , STRING27 , STRING28 , STRING29 , STRING30
+from Config import STRING, SUDO, BIO_MESSAGE, ALIVE_NAME, API_ID, API_HASH, STRING2, STRING3, STRING4 ,STRING5, STRING6, STRING7, STRING8 ,STRING9, STRING10, STRING11, STRING12 , STRING13 , STRING14 , STRING15 ,STRING16 , STRING17 , STRING18 , STRING19 , STRING20 , STRING21 , STRING22 , STRING23 , STRING24 , STRING25 , STRING26 , STRING27 , STRING28 , STRING29 , STRING30
 import asyncio
 import telethon.utils
 from telethon.tl import functions
@@ -27,12 +27,8 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 from Utils import RAID, RRAID
 
 
-a = API_ID1
-b = API_HASH1
-c = API_ID2
-d = API_HASH2
-e = API_ID3
-f = API_HASH3
+a = API_ID
+b = API_HASH
 smex = STRING
 smexx = STRING2
 smexxx = STRING3
@@ -423,7 +419,7 @@ async def start_yukki():
     if eleve:
         session_name = str(eleve)
         print("String 11 Found")
-        vkk = TelegramClient(StringSession(session_name), c, d)
+        vkk = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 11")
             await vkk.start()
@@ -442,7 +438,7 @@ async def start_yukki():
         print("Session 11 not Found")
         pass
         session_name = "startup"
-        vkk = TelegramClient(session_name, c, d)
+        vkk = TelegramClient(session_name, a, b)
         try:
             await vkk.start()
         except Exception as e:
@@ -452,7 +448,7 @@ async def start_yukki():
     if twelv:
         session_name = str(twelv)
         print("String 12 Found")
-        kkk = TelegramClient(StringSession(session_name), c, d)
+        kkk = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 12")
             await kkk.start()
@@ -471,7 +467,7 @@ async def start_yukki():
         print("Session 12 not Found")
         pass
         session_name = "startup"
-        kkk = TelegramClient(session_name, c, d)
+        kkk = TelegramClient(session_name, a, b)
         try:
             await kkk.start()
         except Exception as e:
@@ -481,7 +477,7 @@ async def start_yukki():
     if thirt:
         session_name = str(thirt)
         print("String 13  Found")
-        lkk = TelegramClient(StringSession(session_name), c, d)
+        lkk = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 13")
             await lkk.start()
@@ -500,7 +496,7 @@ async def start_yukki():
         print("Session 13 not Found")
         pass
         session_name = "startup"
-        lkk = TelegramClient(session_name, c, d)
+        lkk = TelegramClient(session_name, a, b)
         try:
             await lkk.start()
         except Exception as e:
@@ -510,7 +506,7 @@ async def start_yukki():
     if forte:
         session_name = str(forte)
         print("String 14 Found")
-        mkk = TelegramClient(StringSession(session_name), c, d)
+        mkk = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 14")
             await mkk.start()
@@ -529,7 +525,7 @@ async def start_yukki():
         print("Session 14 not Found")
         pass
         session_name = "startup"
-        mkk = TelegramClient(session_name, c, d)
+        mkk = TelegramClient(session_name, a, b)
         try:
             await mkk.start()
         except Exception as e:
@@ -539,7 +535,7 @@ async def start_yukki():
     if fifth:
         session_name = str(fifth)
         print("String 15 Found")
-        sid = TelegramClient(StringSession(session_name), c, d)
+        sid = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 15")
             await sid.start()
@@ -558,7 +554,7 @@ async def start_yukki():
         print("Session 15 not Found")
         pass
         session_name = "startup"
-        sid = TelegramClient(session_name, c, d)
+        sid = TelegramClient(session_name, a, b)
         try:
             await sid.start()
         except Exception as e:
@@ -568,7 +564,7 @@ async def start_yukki():
     if sieee:
         session_name = str(sieee)
         print("String 16 Found")
-        shy = TelegramClient(StringSession(session_name), c, d)
+        shy = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 16")
             await shy.start()
@@ -586,7 +582,7 @@ async def start_yukki():
     else:
         print("Session 16 not Found")
         session_name = "startup"
-        shy = TelegramClient(session_name, c, d)
+        shy = TelegramClient(session_name, a, b)
         try:
             await shy.start()
         except Exception as e:
@@ -595,7 +591,7 @@ async def start_yukki():
     if seeee:
         session_name = str(seeee)
         print("String 17 Found")
-        aan = TelegramClient(StringSession(session_name), c, d)
+        aan = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 17")
             await aan.start()
@@ -613,7 +609,7 @@ async def start_yukki():
     else:
         print("Session 17 not Found")
         session_name = "startup"
-        aan = TelegramClient(session_name, c, d)
+        aan = TelegramClient(session_name, a, b)
         try:
             await aan.start()
         except Exception as e:
@@ -622,7 +618,7 @@ async def start_yukki():
     if eieee:
         session_name = str(eieee)
         print("String 18 Found")
-        ake = TelegramClient(StringSession(session_name), c, d)
+        ake = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 18")
             await ake.start()
@@ -640,7 +636,7 @@ async def start_yukki():
     else:
         print("Session 18 not Found")
         session_name = "startup"
-        ake = TelegramClient(session_name, c, d)
+        ake = TelegramClient(session_name, a, b)
         try:
             await ake.start()
         except Exception as e:
@@ -649,7 +645,7 @@ async def start_yukki():
     if nieee:
         session_name = str(nieee)
         print("String 19 Found")
-        eel = TelegramClient(StringSession(session_name), c, d)
+        eel = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 19")
             await eel.start()
@@ -667,7 +663,7 @@ async def start_yukki():
     else:
         print("Session 19 not Found")
         session_name = "startup"
-        eel = TelegramClient(session_name, c, d)
+        eel = TelegramClient(session_name, a, b)
         try:
             await idk.start()
         except Exception as e:
@@ -676,7 +672,7 @@ async def start_yukki():
     if gandu:
         session_name = str(gandu)
         print("String 20 Found")
-        khu = TelegramClient(StringSession(session_name), c, d)
+        khu = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 20")
             await khu.start()
@@ -694,7 +690,7 @@ async def start_yukki():
     else:
         print("Session 20 not Found")
         session_name = "startup"
-        khu = TelegramClient(session_name, c, d)
+        khu = TelegramClient(session_name, a, b)
         try:
             await khu.start()
         except Exception as e:
@@ -703,7 +699,7 @@ async def start_yukki():
     if ekish:
         session_name = str(ekish)
         print("String 21 Found")
-        shi = TelegramClient(StringSession(session_name), e, f)
+        shi = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 21")
             await shi.start()
@@ -721,7 +717,7 @@ async def start_yukki():
     else:
         print("Session 21 not Found")
         session_name = "startup"
-        shi = TelegramClient(session_name, e, f)
+        shi = TelegramClient(session_name, a, b)
         try:
             await shi.start()
         except Exception as e:
@@ -730,7 +726,7 @@ async def start_yukki():
     if baish:
         session_name = str(baish)
         print("String 22 Found")
-        yaa = TelegramClient(StringSession(session_name), e, f)
+        yaa = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 22")
             await yaa.start()
@@ -748,7 +744,7 @@ async def start_yukki():
     else:
         print("Session 22 not Found")
         session_name = "startup"
-        yaa = TelegramClient(session_name, e, f)
+        yaa = TelegramClient(session_name, a, b)
         try:
             await yaa.start()
         except Exception as e:
@@ -757,7 +753,7 @@ async def start_yukki():
     if teish:
         session_name = str(teish)
         print("String 23 Found")
-        dav = TelegramClient(StringSession(session_name), e, f)
+        dav = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 23")
             await dav.start()
@@ -775,7 +771,7 @@ async def start_yukki():
     else:
         print("Session 23 not Found")
         session_name = "startup"
-        dav = TelegramClient(session_name, e, f)
+        dav = TelegramClient(session_name, a, b)
         try:
             await dav.start()
         except Exception as e:
@@ -784,7 +780,7 @@ async def start_yukki():
     if tfour:
         session_name = str(tfour)
         print("String 24 Found")
-        raj = TelegramClient(StringSession(session_name), e, f)
+        raj = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 24")
             await raj.start()
@@ -802,7 +798,7 @@ async def start_yukki():
     else:
         print("Session 24 not Found")
         session_name = "startup"
-        raj = TelegramClient(session_name, e, f)
+        raj = TelegramClient(session_name, a, b)
         try:
             await raj.start()
         except Exception as e:
@@ -811,7 +807,7 @@ async def start_yukki():
     if tfive:
         session_name = str(tfive)
         print("String 25 Found")
-        put = TelegramClient(StringSession(session_name), e, f)
+        put = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 25")
             await put.start()
@@ -829,7 +825,7 @@ async def start_yukki():
     else:
         print("Session 25 not Found")
         session_name = "startup"
-        put = TelegramClient(session_name, e, f)
+        put = TelegramClient(session_name, a, b)
         try:
             await put.start()
         except Exception as e:
@@ -838,7 +834,7 @@ async def start_yukki():
     if tsix:
         session_name = str(tsix)
         print("String 26 Found")
-        eag = TelegramClient(StringSession(session_name), e, f)
+        eag = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 26")
             await eag.start()
@@ -856,7 +852,7 @@ async def start_yukki():
     else:
         print("Session 26 not Found")
         session_name = "startup"
-        eag = TelegramClient(session_name, e, f)
+        eag = TelegramClient(session_name, a, b)
         try:
             await eag.start()
         except Exception as e:
@@ -865,7 +861,7 @@ async def start_yukki():
     if tseven:
         session_name = str(tseven)
         print("String 27 Found")
-        ydk = TelegramClient(StringSession(session_name), e, f)
+        ydk = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 27")
             await gle.start()
@@ -884,7 +880,7 @@ async def start_yukki():
         print("Session 27 not Found")
         pass
         session_name = "startup"
-        gle = TelegramClient(session_name, e, f)
+        gle = TelegramClient(session_name, a, b)
         try:
             await gle.start()
         except Exception as e:
@@ -893,7 +889,7 @@ async def start_yukki():
     if teight:
         session_name = str(teight)
         print("String 28 Found")
-        wal = TelegramClient(StringSession(session_name), e, f)
+        wal = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 28")
             await wal.start()
@@ -912,7 +908,7 @@ async def start_yukki():
         print("Session 28 not Found")
         pass
         session_name = "startup"
-        wal = TelegramClient(session_name, e, f)
+        wal = TelegramClient(session_name, a, b)
         try:
             await wal.start()
         except Exception as e:
@@ -921,7 +917,7 @@ async def start_yukki():
     if tnine:
         session_name = str(tnine)
         print("String 29 Found")
-        aaa = TelegramClient(StringSession(session_name), e, f)
+        aaa = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 29")
             await aaa.start()
@@ -940,7 +936,7 @@ async def start_yukki():
         print("Session 29 not Found")
         pass
         session_name = "startup"
-        aaa = TelegramClient(session_name, e, f)
+        aaa = TelegramClient(session_name, a, b)
         try:
             await aaa.start()
         except Exception as e:
@@ -949,7 +945,7 @@ async def start_yukki():
     if thirty:
         session_name = str(thirty)
         print("String 30 Found")
-        boy = TelegramClient(StringSession(session_name), e, f)
+        boy = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 30")
             await boy.start()
@@ -968,7 +964,7 @@ async def start_yukki():
         print("Session 30 not Found")
         pass
         session_name = "startup"
-        boy = TelegramClient(session_name, e, f)
+        boy = TelegramClient(session_name, a, b)
         try:
             await boy.start()
         except Exception as e:
