@@ -1,7 +1,6 @@
 # SEXY SPAMMER
 
-## MODIFIED OF [YUKKI MULTI SPAM  BOT](https://github.com/YukkiBot/YukkiMultiSpamBot)
-
+## DON'T DEPLOY
 <p align="center">
   <img src="">
 </p>
