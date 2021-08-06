@@ -1,9 +1,9 @@
-# RDX MULTI DEPLOY BOT
+# SEXY SPAMMER
 
 ## MODIFIED OF [YUKKI MULTI SPAM  BOT](https://github.com/YukkiBot/YukkiMultiSpamBot)
 
 <p align="center">
-  <img src="https://telegra.ph/file/c6d5a3802c0f0a7061a34.jpg">
+  <img src="">
 </p>
 
 
@@ -18,7 +18,7 @@
 
 No Requirement of API ID and API HASH
 
-   - Generate on Repl [![Run on Repl.it](https://repl.it/badge/github/YukkiBot/YukkiSpamBot)](https://replit.com/@unknownforall1/RDX-MULTI-SPAM-BOT)
+   - Generate on Repl [![Run on Repl.it](https://repl.it/badge/github/YukkiBot/YukkiSpamBot)](https://replit.com/@unknownforall1/SEXY-SPAMMER)
 
 
 #### Message me on telegram [UNKNOWN](https://t.me/xxxxxxx_UNKNOWN_xxxxxxx)
