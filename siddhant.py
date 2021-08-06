@@ -1394,36 +1394,36 @@ async def spam(e):
 
 
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@vkk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@kkk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@lkk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@mkk.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@sid.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@shy.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@aan.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@ake.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@eel.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@khu.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@shi.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@yaa.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@dav.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@raj.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@put.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@eag.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@gle.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@wal.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@aaa.on(events.NewMessage(incoming=True, pattern=r"\*"))
-@boy.on(events.NewMessage(incoming=True, pattern=r"\*"))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\*repo"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 =     eagle\n\nCommand:\n\n.eagle <count> <Username of User>\n\n.eagle <count> <reply to a User>\n\nCount must be a integer."
     if e.sender_id in SMEX_USERS:
@@ -1641,7 +1641,129 @@ async def _(e):
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
     
-       
+
+
+
+
+
+async def get_chatinfo(event):
+    chat = event.pattern_match.group(1)
+    chat_info = None
+    if chat:
+        try:
+            chat = int(chat)
+        except ValueError:
+            pass
+    if not chat:
+        if event.reply_to_msg_id:
+            replied_msg = await event.get_reply_message()
+            if replied_msg.fwd_from and replied_msg.fwd_from.channel_id is not None:
+                chat = replied_msg.fwd_from.channel_id
+        else:
+            chat = event.chat_id
+    try:
+        chat_info = await event.client(GetFullChatRequest(chat))
+    except:
+        try:
+            chat_info = await event.client(GetFullChannelRequest(chat))
+        except ChannelInvalidError:
+            await event.reply("`Invalid channel/group`")
+            return None
+        except ChannelPrivateError:
+            await event.reply(
+                "`This is a private channel/group or I am banned from there`"
+            )
+            return None
+        except ChannelPublicGroupNaError:
+            await event.reply("`Channel or supergroup doesn't exist`")
+            return None
+        except (TypeError, ValueError):
+            await event.reply("`Invalid channel/group`")
+            return None
+    return chat_info
+
+
+def user_full_name(user):
+    names = [user.first_name, user.last_name]
+    names = [i for i in list(names) if i]
+    full_name = " ".join(names)
+    return full_name
+
+
+@idk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\*add"))
+
+
+async def get_users(event):
+    sender = await event.get_sender()
+    me = await event.client.get_me()
+    if not sender.id == me.id:
+        mafia = await edit_or_reply(event, "`processing...`")
+    else:
+        mafia = await edit_or_reply(event, "`processing...`")
+    h1m4n5hu0p = await get_chatinfo(event)
+    chat = await event.get_chat()
+    if event.is_private:
+        return await mafia.edit("`Sorry, Cant add users here`")
+    s = 0
+    f = 0
+    error = "None"
+
+    await mafia.edit("**TerminalStatus**\n\n`Collecting Users.......`")
+    async for user in event.client.iter_participants(h1m4n5hu0p.full_chat.id):
+        try:
+            if error.startswith("Too"):
+                return await mafia.edit(
+                    f"**Terminal Finished With Error**\n(`May Got Limit Error from telethon Please try agin Later`)\n**Error** : \n`{error}`\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people"
+                )
+            await event.client(
+                functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
+            )
+            s = s + 1
+            await mafia.edit(
+                f"**Terminal Running...**\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people\n\n**× LastError:** `{error}`"
+            )
+        except Exception as e:
+            error = str(e)
+            f = f + 1
+    return await mafia.edit(
+        f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people"
+    )
+
+
+
+
+
+
+
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\*ping"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\*ping"))
@@ -2143,114 +2265,3 @@ else:
 
 
 
-async def get_chatinfo(event):
-    chat = event.pattern_match.group(1)
-    chat_info = None
-    if chat:
-        try:
-            chat = int(chat)
-        except ValueError:
-            pass
-    if not chat:
-        if event.reply_to_msg_id:
-            replied_msg = await event.get_reply_message()
-            if replied_msg.fwd_from and replied_msg.fwd_from.channel_id is not None:
-                chat = replied_msg.fwd_from.channel_id
-        else:
-            chat = event.chat_id
-    try:
-        chat_info = await event.client(GetFullChatRequest(chat))
-    except:
-        try:
-            chat_info = await event.client(GetFullChannelRequest(chat))
-        except ChannelInvalidError:
-            await event.reply("`Invalid channel/group`")
-            return None
-        except ChannelPrivateError:
-            await event.reply(
-                "`This is a private channel/group or I am banned from there`"
-            )
-            return None
-        except ChannelPublicGroupNaError:
-            await event.reply("`Channel or supergroup doesn't exist`")
-            return None
-        except (TypeError, ValueError):
-            await event.reply("`Invalid channel/group`")
-            return None
-    return chat_info
-
-
-def user_full_name(user):
-    names = [user.first_name, user.last_name]
-    names = [i for i in list(names) if i]
-    full_name = " ".join(names)
-    return full_name
-
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@vkk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@kkk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@lkk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@mkk.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@sid.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@shy.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@aan.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@ake.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@eel.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@khu.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@shi.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@yaa.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@dav.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@raj.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@put.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@eag.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@gle.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@wal.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@aaa.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-@boy.on(events.NewMessage(incoming=True, pattern=r"\*add"))
-
-
-async def get_users(event):
-    sender = await event.get_sender()
-    me = await event.client.get_me()
-    if not sender.id == me.id:
-        mafia = await edit_or_reply(event, "`processing...`")
-    else:
-        mafia = await edit_or_reply(event, "`processing...`")
-    h1m4n5hu0p = await get_chatinfo(event)
-    chat = await event.get_chat()
-    if event.is_private:
-        return await mafia.edit("`Sorry, Cant add users here`")
-    s = 0
-    f = 0
-    error = "None"
-
-    await mafia.edit("**TerminalStatus**\n\n`Collecting Users.......`")
-    async for user in event.client.iter_participants(h1m4n5hu0p.full_chat.id):
-        try:
-            if error.startswith("Too"):
-                return await mafia.edit(
-                    f"**Terminal Finished With Error**\n(`May Got Limit Error from telethon Please try agin Later`)\n**Error** : \n`{error}`\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people"
-                )
-            await event.client(
-                functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
-            )
-            s = s + 1
-            await mafia.edit(
-                f"**Terminal Running...**\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people\n\n**× LastError:** `{error}`"
-            )
-        except Exception as e:
-            error = str(e)
-            f = f + 1
-    return await mafia.edit(
-        f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people"
-    )
