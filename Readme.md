@@ -1,10 +1,13 @@
 # DESTROYER-MULTI-SPAM-BO
 
-## DEPLOY ON 30 IDS 
-## BOT SUDO HANDLER * (*ping) (*bigspam) and more
+#### DEPLOY ON 30 IDS 
+### SUDO HANDLER * plugins like (*ping), (*bigspam) , (*raid) ,(*replyraid) and more
+##   - [SIDHANT](https://t.me/siddhant_devil)
+###  - [UJJWAL](https://t.me/SANSKARI_CHORA)
+#### - [VIVEK](https://t.me/xxxxxxx_UNKNOWN_xxxxxxx)
 
 <p align="center">
-  <img src="">
+  <img src="https://telegra.ph/file/06ab8f009e82432a1a85a.jpg">
 </p>
 
 
