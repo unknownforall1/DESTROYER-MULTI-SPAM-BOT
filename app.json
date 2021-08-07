@@ -1,6 +1,6 @@
 {
-  "name": "SEXY SPAMMER BOT",
-  "description": "A POWERFULL AND FAST SPAM BOT BY SIDDHANT .",
+  "name": "DESTROYER-MULTI-SPAM-BOT",
+  "description": "A POWERFULL AND FAST SPAM BOT BY SIDDHANT AND UJJWAL .",
   "logo": "",
   "keywords": [
     "spambot",
@@ -11,7 +11,7 @@
       "STRING": {
         "description": "Telethon String Session",
         "value": "",
-        "required": true
+        "required": false
       },
       "STRING2": {
         "description": "Telethon String Session",
@@ -158,33 +158,13 @@
         "value": "",
         "required": false
       },
-      "API_ID1": {
+      "API_ID": {
         "description": "Telethon String Session",
         "value": "",
         "required": true
       },
-      "API_HASH1": {
+      "API_HASH": {
         "description": "Api Hash",
-        "value": "",
-        "required": true
-      },
-      "API_ID2": {
-        "description": "API ID2",
-        "value": "",
-        "required": true
-      },
-      "API_HASH2": {
-        "description": "Api Hash2",
-        "value": "",
-        "required": true
-      },
-      "API_ID3": {
-        "description": "API ID 3",
-        "value": "",
-        "required": true
-      },
-      "API_HASH3": {
-        "description": "API HASH3",
         "value": "",
         "required": true
       },
