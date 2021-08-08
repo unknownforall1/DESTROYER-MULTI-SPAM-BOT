@@ -1802,11 +1802,11 @@ async def get_users(event):
 async def ping(e):
     if e.sender_id in SMEX_USERS:
         start = datetime.now()
-        text = "💥💣𝙎𝙀𝙈𝙔 𝙎𝙋𝘼𝙈𝙈𝙀𝙍💣💥!"
+        text = "💥💣𝘿𝙀𝙎𝙏𝙍𝙊𝙔𝙀𝙍 𝙈𝙐𝙇𝙏𝙄 𝙎𝙋𝘼𝙈 𝘽𝙊𝙏💣💥!"
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f" 𝙋𝙄𝙉𝙂 !\n`{ms}` ms{ALIVE_NAME} 𝙎𝙀𝙓𝙔 𝙎𝙋𝘼𝙈𝙈𝙀𝙍")
+        await event.edit(f" 𝙋𝙄𝙉𝙂 !\n`{ms}` ms{ALIVE_NAME} 𝘿𝙀𝙎𝙏𝙍𝙊𝙔𝙀𝙍 𝘽𝙊𝙏")
 
 
 
@@ -2017,8 +2017,8 @@ async def help(e):
         
 text = """
 
-💥💥𝙎𝙀𝙓𝙔 𝙎𝙋𝘼𝙈𝙈𝙀𝙍  𝘽𝙊𝙏 BOT IS MODIFIED OF YUKKI 💥💥💥
-💥𝘽𝙔  𝙎𝙄𝘿𝘿𝙃𝘼𝙉𝙏  𝘿𝙀𝙑𝙄𝙇💥"""
+💥💥𝘿𝙀𝙎𝙏𝙍𝙊𝙔𝙀𝙍 𝙈𝙐𝙇𝙏𝙄 𝙎𝙋𝘼𝙈 𝘽𝙊𝙏  💥💥💥
+💥𝘽𝙔  𝙎𝙄𝘿𝘿𝙃𝘼𝙉𝙏  𝘿𝙀𝙑𝙄𝙇 & 𝙐𝙅𝙅𝙒𝘼𝙇 💥"""
 
 print(text)
 print("")
