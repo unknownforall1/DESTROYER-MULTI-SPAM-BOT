@@ -1,6 +1,6 @@
 # DESTROYER-MULTI-SPAM-BO
 
-#### DEPLOY ON 30 IDS 
+#### DEPLOYMENT IS OFF
 ### SUDO HANDLER * plugins like (*ping), (*bigspam) , (*raid) ,(*replyraid) and more
 ##   - [SIDHANT](https://t.me/siddhant_devil)
 ###  - [UJJWAL](https://t.me/SANSKARI_CHORA)
@@ -12,15 +12,6 @@
 
 
 
-## 🚀 Deploy on Heroku 
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Funknownforall1%2FDESTROYER-MULTI-SPAM-BOT)
-
-## String Session FOR  BOT AND IDS 
-
-
-   - BOT STRING [![Run on Repl.it](https://repl.it/badge/github/YukkiBot/YukkiSpamBot)](https://replit.com/@unknownforall1/SPAM-BOT-REPL-BY-SIDDHANT-DEVIL)
-   - IDS STRING [![Run on Repl.it](https://repl.it/badge/github/YukkiBot/YukkiSpamBot)](https://replit.com/@unknownforall1/FATHER-SID-OP-SPAM-BOT)
 
 #### Message me on telegram [UNKNOWN](https://t.me/xxxxxxx_UNKNOWN_xxxxxxx)
 
